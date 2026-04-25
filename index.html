@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Will's Baseball Tools</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #f0ede8;
+      color: #1a1a1a;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1rem;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 480px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.25rem;
+    }
+
+    .header {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .avatar {
+      width: 68px;
+      height: 68px;
+      border-radius: 50%;
+      background: #1a1a1a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #f0ede8;
+      letter-spacing: -0.5px;
+      margin-bottom: 0.25rem;
+    }
+
+    .header h1 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #1a1a1a;
+      letter-spacing: -0.3px;
+    }
+
+    .header p {
+      font-size: 0.8125rem;
+      font-weight: 500;
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .links {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 0.625rem;
+    }
+
+    .link-card {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem 1.25rem;
+      background: #fff;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      border-radius: 16px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+      text-decoration: none;
+      color: inherit;
+      transition: box-shadow 0.15s, transform 0.1s, border-color 0.15s;
+    }
+
+    .link-card:hover {
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.09);
+      transform: translateY(-1px);
+      border-color: rgba(0, 0, 0, 0.13);
+    }
+
+    .link-card:active {
+      transform: translateY(0);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+    }
+
+    .link-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: #f0ede8;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 1.125rem;
+    }
+
+    .link-text {
+      flex: 1;
+    }
+
+    .link-text .title {
+      font-size: 0.9375rem;
+      font-weight: 600;
+      color: #1a1a1a;
+      letter-spacing: -0.2px;
+    }
+
+    .link-text .subtitle {
+      font-size: 0.8125rem;
+      color: #888;
+      margin-top: 0.125rem;
+      font-weight: 400;
+    }
+
+    .arrow {
+      font-size: 1.125rem;
+      color: #ccc;
+      flex-shrink: 0;
+      font-weight: 300;
+    }
+
+    .footer {
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: #bbb;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="avatar">WB</div>
+      <h1>Will's Baseball Tools</h1>
+      <p>Sabermetrics &amp; analytics</p>
+    </div>
+
+    <div class="links">
+      <a class="link-card" href="https://willybeanes.github.io/fg-scatter" target="_blank" rel="noopener noreferrer">
+        <div class="link-icon">⬡</div>
+        <div class="link-text">
+          <div class="title">Scatter Plot Tool</div>
+          <div class="subtitle">Custom FanGraphs scatter charts</div>
+        </div>
+        <div class="arrow">›</div>
+      </a>
+
+      <a class="link-card" href="https://fg-war.vercel.app/" target="_blank" rel="noopener noreferrer">
+        <div class="link-icon">⚡</div>
+        <div class="link-text">
+          <div class="title">WAR Component Breakdown</div>
+          <div class="subtitle">Visualize what drives player WAR</div>
+        </div>
+        <div class="arrow">›</div>
+      </a>
+
+      <a class="link-card" href="https://opposing-probables.vercel.app/" target="_blank" rel="noopener noreferrer">
+        <div class="link-icon">📋</div>
+        <div class="link-text">
+          <div class="title">Opposing Probables Grid</div>
+          <div class="subtitle">Upcoming starter matchup grid</div>
+        </div>
+        <div class="arrow">›</div>
+      </a>
+
+      <a class="link-card" href="https://willybeanes.github.io/xr-philosophy/" target="_blank" rel="noopener noreferrer">
+        <div class="link-icon">📐</div>
+        <div class="link-text">
+          <div class="title">xR Philosophy</div>
+          <div class="subtitle">Expected run framework explainer</div>
+        </div>
+        <div class="arrow">›</div>
+      </a>
+    </div>
+
+    <div class="footer">baseball nerd stuff</div>
+  </div>
+</body>
+</html>
